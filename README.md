@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Planto - Full-Stack Nursery Website
 
 A professional e-commerce platform for plants, gardening supplies, and gardening services.
@@ -53,3 +54,7 @@ planto/
 ├── uploads/            # File uploads
 └── package.json
 ```
+=======
+# planto
+Planto nursery website
+>>>>>>> 6c762dfb181a064f73d4d3f7888f0275784397d6
