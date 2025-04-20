@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/planto/static/css/main.e6c13ad2.css",
+    "main.js": "/planto/static/js/main.62ee2c11.js",
+    "static/js/453.419a5d54.chunk.js": "/planto/static/js/453.419a5d54.chunk.js",
+    "index.html": "/planto/index.html",
+    "main.e6c13ad2.css.map": "/planto/static/css/main.e6c13ad2.css.map",
+    "main.62ee2c11.js.map": "/planto/static/js/main.62ee2c11.js.map",
+    "453.419a5d54.chunk.js.map": "/planto/static/js/453.419a5d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.62ee2c11.js"
+  ]
+}
