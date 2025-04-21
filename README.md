@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Planto - Full-Stack Nursery Website
 
 A professional e-commerce platform for plants, gardening supplies, and gardening services.
@@ -58,3 +59,7 @@ planto/
 # planto
 Planto nursery website
 >>>>>>> 6c762dfb181a064f73d4d3f7888f0275784397d6
+=======
+# planto2
+project2
+>>>>>>> 804c715bd085139d4f5e0ee7f92024727a0d1fef
