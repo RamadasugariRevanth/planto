@@ -11,9 +11,12 @@ import Register from './pages/auth/Register';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import MyOrders from './pages/MyOrders';
+import Contact from './pages/Contact';
+import BookGardener from './pages/BookGardener';
 import OrderSuccess from './pages/OrderSuccess';
 import { CartProvider } from './context/CartContext';
 import { AuthProvider } from './context/AuthContext';
+import BlogPage from './pages/BlogPage';
 
 // Create theme instance
 const theme = createTheme({
@@ -85,7 +88,10 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/planto" element={<HomePage />} />
               <Route path="/shop" element={<ShopPage />} />
+              <Route path="/blog" element={<BlogPage/>} />
+
               <Route path="/product/:id" element={<ProductDetails />} />
               <Route path="/checkout" element={
                   <ProtectedRoute>
@@ -105,6 +111,8 @@ function App() {
               } />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/bookgardener" element={<BookGardener />} />
               <Route path="/admin/*" element={
                 <ProtectedRoute adminOnly>
                   <AdminDashboard />

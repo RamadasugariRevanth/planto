@@ -6,6 +6,7 @@ const adminRoutes = require('./server/routes/admin');
 const productRoutes = require('./server/routes/products');
 const orderRoutes = require('./server/routes/orders');
 const userRoutes = require('./server/routes/users');
+const adminRoutes = require('.server/routes/adminRoutes'); // Adjust path if needed
 require('dotenv').config();
 
 const app = express();
@@ -14,6 +15,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 
 // Create uploads directory if it doesn't exist
 const uploadsDir = path.join(__dirname, 'uploads');
@@ -24,11 +26,16 @@ if (!require('fs').existsSync(uploadsDir)) {
 // Serve uploaded files
 app.use('/uploads', express.static(uploadsDir));
 
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/admin', adminRoutes);
 
 app.use('/api/users', userRoutes);
+
+app.use('/api/orders', orderRoutes);    // for orders
+
+app.use('/api', adminRoutes);
 
 // Health check route
 app.get('/api/health', (req, res) => {

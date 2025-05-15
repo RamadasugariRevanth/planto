@@ -99,12 +99,18 @@ const CartDrawer = ({ open, onClose }) => {
           {cart.items.map((item) => (
             <React.Fragment key={item.id}>
               <ListItem>
-                <Box
-                  component="img"
-                  src={item.image}
-                  alt={item.name}
-                  sx={{ width: 60, height: 60, mr: 2, objectFit: 'cover' }}
-                />
+                
+            <Box
+            component="img"
+            src={
+              item.image.startsWith('http')
+                ? item.image
+                : `http://localhost:5000/uploads/${item.image}`
+            }
+            alt={item.name}
+            sx={{ width: 60, height: 60, mr: 2, objectFit: 'cover' }}
+          />
+
                 <ListItemText
                   primary={item.name}
                   secondary={`$${Number(item.price) ? Number(item.price).toFixed(2) : '0.00'}`}

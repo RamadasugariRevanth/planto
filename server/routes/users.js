@@ -41,6 +41,18 @@ router.get('/profile', auth, async (req, res) => {
   }
 });
 
+
+router.get('/', async (req, res) => {
+  try {
+    const result = await query('SELECT COUNT(*) AS total FROM users WHERE active = 1');
+    res.json({ total: result[0].total });
+  } catch (error) {
+    console.error('Error fetching users:', error);
+    res.status(500).json({ message: 'Error fetching users' });
+  }
+});
+
+
 // Update user profile and shipping details
 router.put('/profile', auth, async (req, res) => {
   const connection = await req.db.getConnection();

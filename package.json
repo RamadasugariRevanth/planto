@@ -1,11 +1,14 @@
 {
-  "homepage":"https://github.io/RamadasugariRevanth",
+  "homepage": "https:///RamadasugariRevanth.github.io/planto",
   "name": "planto",
   "version": "1.0.0",
   "description": "A full-stack nursery website with plant shopping and gardening services",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "nodemon server.js",
     "client": "cd client && npm start",
     "dev:full": "concurrently \"npm run dev\" \"npm run client\""
@@ -19,6 +22,8 @@
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.14.0",
     "nodemailer": "^6.10.0",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^11.0.5",
     "sequelize": "^6.30.0"
   },
   "devDependencies": {

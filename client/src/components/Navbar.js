@@ -19,14 +19,20 @@ import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import CartDrawer from './cart/CartDrawer';
+import Login from '../pages/auth/Login';
+import Contact from '../pages/Contact';
+import BookGardener from '../pages/BookGardener';
+import BlogPage from '../pages/BlogPage';
 
 const pages = [
   { title: 'Shop', path: '/shop' },
-  { title: 'Book Gardener', path: '/book-gardener' },
-  { title: 'Blog', path: '/blog' },
+  { title: 'Book Gardener', path: '/bookgardener' },
+  { title: 'Blog', path: '/blog' }, // <-- Fix here
   { title: 'About', path: '/about' },
   { title: 'Contact', path: '/contact' },
+  { title: 'Login', path: '/login' },
 ];
+
 
 const Navbar = () => {
   const { user, logout, isAuthenticated, isAdmin } = useAuth();
